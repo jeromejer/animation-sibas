@@ -1,0 +1,98 @@
+
+.box_preloader {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(210 214 222);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_preloader {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.box_button {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.button_close {
+    width: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: opacity_button .1s linear;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+.opacity {
+    animation: opacity .2s linear;
+    animation-fill-mode: both;
+}
+
+.logo1 {
+    width: 300px;
+    position: absolute;
+    animation: rotation1 1.8s linear infinite;
+}
+
+.logo2 {
+    width: 300px;
+    position: absolute;
+}
+
+.logo3 {
+    width: 300px;
+    position: absolute;
+    animation: rotation2 1.8s linear infinite;
+}
+
+
+@keyframes rotation1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opacity_button {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
